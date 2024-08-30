@@ -26,8 +26,3 @@ TEST(SplayTreeTest, SplayMechanism) {
     tree.find(10);
     EXPECT_EQ(tree.getRoot()->data, 10);
 }
-
-int main(int argc, char **argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}

@@ -14,17 +14,20 @@ incdir = include_directories('inc')
 gtest_proj = subproject('gtest')
 gtest_dep = gtest_proj.get_variable('gtest_dep')
 
-# Test source files only (no main application files)
 test_srcs = [
-    'test/SplayTree.cpp'
+    'main.cpp' ,
+    'test/SplayTree.cpp' ,
+    'test/KruskalTest.cpp'
 ]
 
-# Define test executable using GoogleTest
-test_executable = executable('splaytree_tests',
-                            test_srcs,
+impl_srcs = [
+    'inc/Kruskal.cpp'
+]
+
+test_executable = executable('datastructures_tests',
+                            test_srcs + impl_srcs,
                             dependencies : [gtest_dep],
                             include_directories : incdir,
                             c_args : ['-std=c++2a'])
 
-# Register the test
-test('SplayTreeTests', test_executable)
+test('DataStructuresTests', test_executable)
