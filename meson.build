@@ -17,11 +17,13 @@ gtest_dep = gtest_proj.get_variable('gtest_dep')
 test_srcs = [
     'main.cpp' ,
     'test/SplayTree.cpp' ,
-    'test/KruskalTest.cpp'
+    'test/KruskalTest.cpp' ,
+    'test/SuffixTreeTest.cpp'
 ]
 
 impl_srcs = [
-    'inc/Kruskal.cpp'
+    'inc/Kruskal.cpp' ,
+    'inc/SuffixTree.cpp'
 ]
 
 test_executable = executable('datastructures_tests',
