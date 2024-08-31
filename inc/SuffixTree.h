@@ -7,9 +7,11 @@
 #include <vector>
 #include <string>
 
-class SuffixTree {
+class SuffixTree
+{
 private:
-    struct Node {
+    struct Node
+    {
         std::unordered_map<char, std::shared_ptr<Node>> children;
         std::shared_ptr<Node> suffix_link;
         int start;
@@ -33,16 +35,16 @@ private:
     void setSuffixIndexByDFS(std::shared_ptr<Node> node, int labelHeight);
 
     std::string longestRepeatedSubstring(std::shared_ptr<Node> node, int labelHeight);
-    std::string longestCommonSubstring(std::shared_ptr<Node> node, const std::string& str1, const std::string& str2, int& maxLength);
+    std::string longestCommonSubstring(std::shared_ptr<Node> node, const std::string &str1, const std::string &str2, int &maxLength);
 
 public:
-    SuffixTree(const std::string& text);
+    SuffixTree(const std::string &text);
     void build();
     void print();
 
     std::string longestRepeatedSubstring();
-    std::string longestCommonSubstring(const std::string& str2);
-    bool contains(const std::string& substring);
+    std::string longestCommonSubstring(const std::string &str2);
+    bool contains(const std::string &substring);
 };
 
-#endif // SUFFIXTREE_H
+#endif /* SUFFIXTREE_H */

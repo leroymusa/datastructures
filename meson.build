@@ -18,7 +18,8 @@ test_srcs = [
     'main.cpp' ,
     'test/SplayTree.cpp' ,
     'test/KruskalTest.cpp' ,
-    'test/SuffixTreeTest.cpp'
+    'test/SuffixTreeTest.cpp' ,
+    'test/FibonacciHeapTest.cpp'
 ]
 
 impl_srcs = [

@@ -1,7 +1,8 @@
 #include <gtest/gtest.h>
 #include "SplayTree.h"
 
-TEST(SplayTreeTest, InsertAndFind) {
+TEST(SplayTreeTest, InsertAndFind)
+{
     SplayTree<int> tree;
     tree.insert(10);
     tree.insert(20);
@@ -13,16 +14,15 @@ TEST(SplayTreeTest, InsertAndFind) {
     EXPECT_FALSE(tree.find(40));
 }
 
-TEST(SplayTreeTest, SplayMechanism) {
+TEST(SplayTreeTest, SplayMechanism)
+{
     SplayTree<int> tree;
     tree.insert(10);
     tree.insert(20);
     tree.insert(30);
 
-    // Check the root after splaying
     EXPECT_EQ(tree.getRoot()->data, 30);
 
-    // Test splay operation
     tree.find(10);
     EXPECT_EQ(tree.getRoot()->data, 10);
 }

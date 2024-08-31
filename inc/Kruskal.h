@@ -5,10 +5,11 @@
 #include <algorithm>
 #include <utility>
 
-class Kruskal {
+class Kruskal
+{
 public:
-    typedef std::pair<int, int> Edge; // An edge represented by two vertices
-    typedef std::pair<int, Edge> WeightedEdge; // Weighted edge represented by weight and an edge
+    typedef std::pair<int, int> Edge;
+    typedef std::pair<int, Edge> WeightedEdge;
 
     Kruskal(int vertices);
 
@@ -19,8 +20,8 @@ public:
 
 private:
     int vertices;
-    std::vector<WeightedEdge> edges; // List of edges
-    std::vector<int> parent, rank; // Disjoint set data structure
+    std::vector<WeightedEdge> edges;
+    std::vector<int> parent, rank;
 };
 
-#endif // KRUSKAL_H
+#endif /* KRUSKAL_H */

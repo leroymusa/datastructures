@@ -2,7 +2,8 @@
 
 #include "SuffixTree.h"
 
-TEST(SuffixTreeTest, BasicOperations) {
+TEST(SuffixTreeTest, BasicOperations)
+{
     SuffixTree tree("banana");
     tree.build();
     EXPECT_TRUE(tree.contains("ana"));
@@ -11,20 +12,23 @@ TEST(SuffixTreeTest, BasicOperations) {
     EXPECT_FALSE(tree.contains("naan"));
 }
 
-TEST(SuffixTreeTest, SingleCharacterString) {
+TEST(SuffixTreeTest, SingleCharacterString)
+{
     SuffixTree tree("a");
     tree.build();
     EXPECT_TRUE(tree.contains("a"));
     EXPECT_FALSE(tree.contains("b"));
 }
 
-TEST(SuffixTreeTest, EmptyString) {
+TEST(SuffixTreeTest, EmptyString)
+{
     SuffixTree tree("");
     tree.build();
     EXPECT_FALSE(tree.contains("a"));
 }
 
-TEST(SuffixTreeTest, RepeatedCharacters) {
+TEST(SuffixTreeTest, RepeatedCharacters)
+{
     SuffixTree tree("aaaa");
     tree.build();
     EXPECT_TRUE(tree.contains("a"));
@@ -34,7 +38,8 @@ TEST(SuffixTreeTest, RepeatedCharacters) {
     EXPECT_FALSE(tree.contains("b"));
 }
 
-TEST(SuffixTreeTest, PalindromeString) {
+TEST(SuffixTreeTest, PalindromeString)
+{
     SuffixTree tree("racecar");
     tree.build();
     EXPECT_TRUE(tree.contains("race"));
@@ -44,19 +49,22 @@ TEST(SuffixTreeTest, PalindromeString) {
     EXPECT_FALSE(tree.contains("carer"));
 }
 
-TEST(SuffixTreeTest, LongestRepeatedSubstring) {
+TEST(SuffixTreeTest, LongestRepeatedSubstring)
+{
     SuffixTree tree("banana");
     tree.build();
 }
 
-TEST(SuffixTreeTest, LongestCommonSubstring) {
+TEST(SuffixTreeTest, LongestCommonSubstring)
+{
     SuffixTree tree1("banana");
     SuffixTree tree2("ananas");
     tree1.build();
     tree2.build();
 }
 
-TEST(SuffixTreeTest, ComplexString) {
+TEST(SuffixTreeTest, ComplexString)
+{
     SuffixTree tree("thequickbrownfoxjumpsoverthelazydog");
     tree.build();
     EXPECT_TRUE(tree.contains("quick"));
