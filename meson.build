@@ -20,13 +20,15 @@ test_srcs = [
     'test/KruskalTest.cpp' ,
     'test/SuffixTreeTest.cpp' ,
     'test/FibonacciHeapTest.cpp' ,
-    'test/PrimsAlgorithmTest.cpp'
+    'test/PrimsAlgorithmTest.cpp' ,
+    'test/TrieTest.cpp'
 ]
 
 impl_srcs = [
     'inc/Kruskal.cpp' ,
     'inc/SuffixTree.cpp' ,
-    'inc/PrimsAlgorithm.cpp'
+    'inc/PrimsAlgorithm.cpp' ,
+    'inc/Trie.cpp'
 ]
 
 test_executable = executable('datastructures_tests',
