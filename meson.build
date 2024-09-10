@@ -22,7 +22,8 @@ test_srcs = [
     'test/FibonacciHeapTest.cpp' ,
     'test/PrimsAlgorithmTest.cpp' ,
     'test/TrieTest.cpp' , 
-    'test/SegmentTreeTest.cpp'
+    'test/SegmentTreeTest.cpp' ,
+    'test/TreapTest.cpp'
 ]
 
 impl_srcs = [
@@ -30,7 +31,7 @@ impl_srcs = [
     'inc/SuffixTree.cpp' ,
     'inc/PrimsAlgorithm.cpp' ,
     'inc/Trie.cpp' ,
-    'inc/SegmentTree.cpp'
+    'inc/SegmentTree.cpp' ,
 ]
 
 test_executable = executable('datastructures_tests',
