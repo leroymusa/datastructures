@@ -23,7 +23,8 @@ test_srcs = [
     'test/PrimsAlgorithmTest.cpp' ,
     'test/TrieTest.cpp' , 
     'test/SegmentTreeTest.cpp' ,
-    'test/TreapTest.cpp'
+    'test/TreapTest.cpp' ,
+    'test/DisjointSetTest.cpp'
 ]
 
 impl_srcs = [
@@ -32,6 +33,7 @@ impl_srcs = [
     'inc/PrimsAlgorithm.cpp' ,
     'inc/Trie.cpp' ,
     'inc/SegmentTree.cpp' ,
+    'inc/DisjointSet.cpp'
 ]
 
 test_executable = executable('datastructures_tests',
