@@ -5,9 +5,11 @@
 #include <memory>
 #include <unordered_map>
 
-class Trie {
+class Trie
+{
 private:
-    struct TrieNode {
+    struct TrieNode
+    {
         bool isEndOfWord;
         std::unordered_map<char, std::shared_ptr<TrieNode>> children;
 

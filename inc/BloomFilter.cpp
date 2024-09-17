@@ -1,6 +1,7 @@
 #include "BloomFilter.h"
 
-BloomFilter::BloomFilter(int size, int hashCount) : size(size), hashCount(hashCount), bitArray(size, false) {}
+BloomFilter::BloomFilter(int size, int hashCount)
+    : bitArray(size, false), size(size), hashCount(hashCount) {}
 
 int BloomFilter::hash(const std::string &data, int seed) const
 {
@@ -10,9 +11,9 @@ int BloomFilter::hash(const std::string &data, int seed) const
 
 void BloomFilter::insert(const std::string &data)
 {
-    for (int ii = 0; ii < hashCount; ++i)
+    for (int ii = 0; ii < hashCount; ++ii)
     {
-        int hashValue = hash(data, i);
+        int hashValue = hash(data, ii);
         bitArray[hashValue] = true;
     }
 }

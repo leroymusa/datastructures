@@ -25,7 +25,8 @@ test_srcs = [
     'test/SegmentTreeTest.cpp' ,
     'test/TreapTest.cpp' ,
     'test/DisjointSetTest.cpp' ,
-    'test/BloomFilterTest.cpp'
+    'test/BloomFilterTest.cpp' ,
+    'test/FenwickTreeTest.cpp'
 ]
 
 impl_srcs = [
@@ -35,7 +36,8 @@ impl_srcs = [
     'inc/Trie.cpp' ,
     'inc/SegmentTree.cpp' ,
     'inc/DisjointSet.cpp' ,
-    'inc/BloomFilter.cpp'
+    'inc/BloomFilter.cpp' ,
+    'inc/FenwickTree.cpp'
 ]
 
 test_executable = executable('datastructures_tests',
