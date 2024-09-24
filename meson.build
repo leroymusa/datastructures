@@ -8,7 +8,7 @@ if cc.get_id() == 'gcc'
 endif
 
 # Include directory
-incdir = include_directories('inc')
+incdir = include_directories('inc', 'inc/physics', '/usr/include/eigen3')
 
 # GoogleTest subproject setup
 gtest_proj = subproject('gtest')
@@ -27,7 +27,8 @@ test_srcs = [
     'test/DisjointSetTest.cpp' ,
     'test/BloomFilterTest.cpp' ,
     'test/FenwickTreeTest.cpp' ,
-    'test/vEBTreeTest.cpp'
+    'test/vEBTreeTest.cpp' ,
+    'test/SPHFluidTest.cpp'
 ]
 
 impl_srcs = [
@@ -39,7 +40,11 @@ impl_srcs = [
     'inc/DisjointSet.cpp' ,
     'inc/BloomFilter.cpp' ,
     'inc/FenwickTree.cpp' ,
-    'inc/vEBTree.cpp'
+    'inc/vEBTree.cpp' ,
+    'inc/physics/main.cpp' , 
+    'inc/physics/SPHKernel.cpp' ,
+    'inc/physics/FluidSimulator.cpp' ,
+    'inc/physics/Particle.cpp'
 ]
 
 test_executable = executable('datastructures_tests',
