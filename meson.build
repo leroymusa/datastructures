@@ -29,7 +29,8 @@ test_srcs = [
     'test/FenwickTreeTest.cpp' ,
     'test/vEBTreeTest.cpp' ,
     'test/SPHFluidTest.cpp' ,
-    'test/AhoCorasickTest.cpp'
+    'test/AhoCorasickTest.cpp' ,
+    'test/SqrtDecompositionTest.cpp'
 ]
 
 impl_srcs = [
@@ -46,7 +47,8 @@ impl_srcs = [
     'inc/physics/SPHKernel.cpp' ,
     'inc/physics/FluidSimulator.cpp' ,
     'inc/physics/Particle.cpp' ,
-    'inc/AhoCorasick.cpp'
+    'inc/AhoCorasick.cpp' ,
+    'inc/SqrtDecomposition.cpp'
 ]
 
 test_executable = executable('datastructures_tests',
