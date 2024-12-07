@@ -21,7 +21,7 @@ test_srcs = [
     'test/SuffixTreeTest.cpp' ,
     'test/FibonacciHeapTest.cpp' ,
     'test/PrimsAlgorithmTest.cpp' ,
-    'test/TrieTest.cpp' , 
+    'test/TrieTest.cpp' ,
     'test/SegmentTreeTest.cpp' ,
     'test/TreapTest.cpp' ,
     'test/DisjointSetTest.cpp' ,
@@ -30,7 +30,8 @@ test_srcs = [
     'test/vEBTreeTest.cpp' ,
     'test/SPHFluidTest.cpp' ,
     'test/AhoCorasickTest.cpp' ,
-    'test/SqrtDecompositionTest.cpp'
+    'test/SqrtDecompositionTest.cpp' ,
+    'test/DisjointSparseTableTest.cpp'
 ]
 
 impl_srcs = [
@@ -43,12 +44,13 @@ impl_srcs = [
     'inc/BloomFilter.cpp' ,
     'inc/FenwickTree.cpp' ,
     'inc/vEBTree.cpp' ,
-    'inc/physics/main.cpp' , 
+    'inc/physics/main.cpp' ,
     'inc/physics/SPHKernel.cpp' ,
     'inc/physics/FluidSimulator.cpp' ,
     'inc/physics/Particle.cpp' ,
     'inc/AhoCorasick.cpp' ,
-    'inc/SqrtDecomposition.cpp'
+    'inc/SqrtDecomposition.cpp' ,
+    'inc/DisjointSparseTable.cpp'
 ]
 
 test_executable = executable('datastructures_tests',
